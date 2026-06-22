@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Theme Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ---------------------------------------------------
+       GLOBAL DESIGN SYSTEM (same as your main site)
+    --------------------------------------------------- */
+    :root {
+      --font-body: "Poppins", system-ui, sans-serif;
+
+      /* Light mode */
+      --light-bg: #FDF8E8;
+      --light-bg-accent: #FFF4D0;
+      --light-text: #1B1B1F;
+      --light-primary: #0B7C4A;
+      --light-secondary: #C89B2B;
+      --light-accent: #FFD95E;
+
+      /* Dark mode */
+      --dark-bg: #05030A;
+      --dark-bg-accent: #12041F;
+      --dark-text: #F5ECFF;
+      --dark-primary: #B57CFF;
+      --dark-secondary: #D04BFF;
+      --dark-accent: #FF4DF0;
+
+      --card-radius: 18px;
+      --transition-med: 260ms ease-out;
+    }
+
+    html[data-theme="light"] {
+      --bg: var(--light-bg);
+      --bg-accent: var(--light-bg-accent);
+      --text: var(--light-text);
+      --primary: var(--light-primary);
+      --secondary: var(--light-secondary);
+      --accent: var(--light-accent);
+    }
+
+    html[data-theme="dark"] {
+      --bg: var(--dark-bg);
+      --bg-accent: var(--dark-bg-accent);
+      --text: var(--dark-text);
+      --primary: var(--dark-primary);
+      --secondary: var(--dark-secondary);
+      --accent: var(--dark-accent);
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      background: radial-gradient(circle at top left, var(--bg-accent), var(--bg));
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ---------------------------------------------------
+       NAVIGATION BAR
+    --------------------------------------------------- */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 28px;
+      backdrop-filter: blur(14px);
+      background: rgba(0, 0, 0, 0.08);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    html[data-theme="dark"] nav {
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      margin-right: 20px;
+      font-weight: 500;
+      transition: color var(--transition-med);
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .theme-toggle {
+      cursor: pointer;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    html[data-theme="light"] .theme-toggle {
+      background: rgba(0, 0, 0, 0.08);
+    }
+
+    /* ---------------------------------------------------
+       ANIMATED SWIRLS
+    --------------------------------------------------- */
+    @keyframes swirlDrift {
+      0%   { transform: translate(-10%, -10%) scale(1) rotate(0deg); }
+      50%  { transform: translate(-8%, -12%) scale(1.03) rotate(3deg); }
+      100% { transform: translate(-10%, -10%) scale(1) rotate(0deg); }
+    }
+
+    @keyframes glowPulse {
+      0%   { opacity: 0.5; filter: drop-shadow(0 0 12px var(--accent)); }
+      50%  { opacity: 0.9; filter: drop-shadow(0 0 22px var(--secondary)); }
+      100% { opacity: 0.5; filter: drop-shadow(0 0 12px var(--accent)); }
+    }
+
+    .swirl-layer {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .swirl-layer svg {
+      width: 140%;
+      height: 140%;
+      animation: swirlDrift 22s ease-in-out infinite;
+    }
+
+    .swirl-glow {
+      animation: glowPulse 6s ease-in-out infinite;
+    }
+
+    /* ---------------------------------------------------
+       PAGE CONTENT
+    --------------------------------------------------- */
+    .container {
+      position: relative;
+      z-index: 1;
+      padding: 40px 28px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 12px;
+    }
+
+    p.subtitle {
+      font-size: 18px;
+      opacity: 0.85;
+      margin-bottom: 40px;
+    }
+
+    .preview-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+
+    .preview-card {
+      border-radius: 22px;
+      padding: 28px;
+      backdrop-filter: blur(18px);
+      background: rgba(255, 255, 255, 0.12);
+      position: relative;
+      overflow: hidden;
+    }
+
+    html[data-theme="light"] .preview-card {
+      background: rgba(255, 255, 255, 0.85);
+    }
+
+    .preview-title {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .preview-desc {
+      font-size: 15px;
+      opacity: 0.85;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="agents.html">Agents</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="theme-preview.html">Themes</a>
+      <a href="art-gallery.html">Art Gallery</a>
+      <a href="profiles.html">Profiles</a>
+      <a href="about.html">About</a>
+    </div>
+    <div class="theme-toggle" id="themeToggle">Toggle Theme</div>
+  </nav>
+
+  <!-- ANIMATED SWIRLS -->
+  <div class="swirl-layer">
+    <svg viewBox="0 0 800 600">
+      <defs>
+        <linearGradient id="lightSwirl" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#C89B2B" />
+          <stop offset="50%" stop-color="#0B7C4A" />
+          <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+        </linearGradient>
+        <linearGradient id="darkSwirl" x1="0" y1="1" x2="1" y2="0">
+          <stop offset="0%" stop-color="#5B2B9B" />
+          <stop offset="50%" stop-color="#B57CFF" />
+          <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+        </linearGradient>
+      </defs>
+
+      <path class="swirl-glow" d="M-40 120 C 160 -40 360 40 520 80" stroke="url(#lightSwirl)" stroke-width="80" fill="none"/>
+      <path class="swirl-glow" d="M-60 420 C 120 520 320 520 480 460" stroke="url(#darkSwirl)" stroke-width="70" fill="none"/>
+      <circle class="swirl-glow" cx="120" cy="480" r="80" fill="url(#darkSwirl)" />
+      <circle class="swirl-glow" cx="640" cy="140" r="70" fill="url(#lightSwirl)" />
+    </svg>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="container">
+    <h1>Theme Preview</h1>
+    <p class="subtitle">Compare Light Mode and Dark Mode side by side, complete with animated glowing swirls.</p>
+
+    <div class="preview-grid">
+      <!-- LIGHT MODE PREVIEW -->
+      <div class="preview-card">
+        <h2 class="preview-title">Light Mode</h2>
+        <p class="preview-desc">
+          Gold‑white base, royal green accents, soft artistic shapes, and elegant drifting motion.
+        </p>
+      </div>
+
+      <!-- DARK MODE PREVIEW -->
+      <div class="preview-card">
+        <h2 class="preview-title">Dark Mode</h2>
+        <p class="preview-desc">
+          Cosmic purple base, neon violet glow, magical swirling motion, and Prodigy‑style energy.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const root = document.documentElement;
+    const toggle = document.getElementById("themeToggle");
+
+    toggle.addEventListener("click", () => {
+      const current = root.getAttribute("data-theme");
+      root.setAttribute("data-theme", current === "light" ? "dark" : "light");
+    });
+  </script>
+
+</body>
+</html>
