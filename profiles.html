@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profiles – Copilot Agents</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Global Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- NAVIGATION BAR -->
+  <nav>
+    <div class="nav-left">
+      <a href="index.html">Home</a>
+      <a href="agents.html">Agents</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="theme-preview.html">Themes</a>
+      <a href="art-gallery.html">Art Gallery</a>
+      <a href="profiles.html">Profiles</a>
+      <a href="about.html">About</a>
+    </div>
+    <div class="theme-toggle">Toggle Theme</div>
+  </nav>
+
+  <!-- ANIMATED SWIRL BACKGROUND -->
+  <div class="swirl-layer">
+    <svg viewBox="0 0 800 600">
+      <defs>
+        <!-- Light Mode Gradient -->
+        <linearGradient id="lightSwirl" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#C89B2B" />
+          <stop offset="50%" stop-color="#0B7C4A" />
+          <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+        </linearGradient>
+
+        <!-- Dark Mode Gradient -->
+        <linearGradient id="darkSwirl" x1="0" y1="1" x2="1" y2="0">
+          <stop offset="0%" stop-color="#5B2B9B" />
+          <stop offset="50%" stop-color="#B57CFF" />
+          <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+        </linearGradient>
+      </defs>
+
+      <!-- Swirl Shapes -->
+      <path class="swirl-glow"
+            d="M-40 120 C 160 -40 360 40 520 80"
+            stroke="url(#lightSwirl)"
+            stroke-width="80"
+            fill="none" />
+
+      <path class="swirl-glow"
+            d="M-60 420 C 120 520 320 520 480 460"
+            stroke="url(#darkSwirl)"
+            stroke-width="70"
+            fill="none" />
+
+      <circle class="swirl-glow"
+              cx="120" cy="480" r="80"
+              fill="url(#darkSwirl)" />
+
+      <circle class="swirl-glow"
+              cx="640" cy="140" r="70"
+              fill="url(#lightSwirl)" />
+    </svg>
+  </div>
+
+  <!-- PAGE CONTENT -->
+  <div class="page">
+    <h1>Expanded Agent Profiles</h1>
+    <p class="subtitle">
+      Deep‑dive descriptions, strengths, and best‑use cases for each agent.
+    </p>
+
+    <!-- CUSTOMER SERVICE -->
+    <div class="section">
+      <h2>Customer Service Agent</h2>
+      <p class="about-text">
+        <strong>Strengths:</strong> empathy, clarification, issue detection<br>
+        <strong>Best for:</strong> frontline support, understanding user intent<br><br>
+        This agent is your “first contact.” It listens closely, asks clarifying questions, and identifies what the user truly needs. It prevents misunderstandings and ensures the rest of the system starts with clean, accurate context.
+      </p>
+    </div>
+
+    <!-- RESEARCH & ANALYSIS -->
+    <div class="section">
+      <h2>Research & Analysis Agent</h2>
+      <p class="about-text">
+        <strong>Strengths:</strong> summarization, fact extraction, consistency checks<br>
+        <strong>Best for:</strong> analyzing long text, gathering evidence<br><br>
+        This agent digs through information, extracts key points, and verifies accuracy. It builds the factual foundation the rest of the agents rely on.
+      </p>
+    </div>
+
+    <!-- BUSINESS STRATEGY -->
+    <div class="section">
+      <h2>Business Strategy Agent</h2>
+      <p class="about-text">
+        <strong>Strengths:</strong> feasibility, operations, risk evaluation<br>
+        <strong>Best for:</strong> turning ideas into realistic plans<br><br>
+        This agent thinks like an operator. It evaluates whether an idea is practical, what resources it requires, and what risks might appear.
+      </p>
+    </div>
+
+    <!-- FINANCIAL & MARKET ANALYSIS -->
+    <div class="section">
+      <h2>Financial & Market Analysis Agent</h2>
+      <p class="about-text">
+        <strong>Strengths:</strong> ROI modeling, cost analysis, market signals<br>
+        <strong>Best for:</strong> validating ideas with numbers<br><br>
+        This agent challenges assumptions using data. It ensures decisions aren’t based on vibes — they’re grounded in financial reality.
+      </p>
+    </div>
+
+    <!-- UNLIMITED INPUT -->
+    <div class="section">
+      <h2>Unlimited‑Input Agent</h2>
+      <p class="about-text">
+        <strong>Strengths:</strong> long‑text handling, chunking, merging<br>
+        <strong>Best for:</strong> documents, transcripts, long chats<br><br>
+        This agent processes huge inputs by breaking them into chunks, analyzing them, and stitching everything back together into a coherent whole.
+      </p>
+    </div>
+
+    <!-- SALES & PERSUASION -->
+    <div class="section">
+      <h2>Sales & Persuasion Agent</h2>
+      <p class="about-text">
+        <strong>Strengths:</strong> messaging, clarity, emotional impact<br>
+        <strong>Best for:</strong> pitches, headlines, landing pages<br><br>
+        This agent tunes language for persuasion, clarity, and conversion. It ensures the final message resonates with the intended audience.
+      </p>
+    </div>
+
+    <!-- INDUSTRY-SPECIFIC -->
+    <div class="section">
+      <h2>Industry‑Specific Agent</h2>
+      <p class="about-text">
+        <strong>Strengths:</strong> domain knowledge, jargon accuracy<br>
+        <strong>Best for:</strong> specialized fields like finance, tech, medicine<br><br>
+        This agent applies real‑world constraints and expertise to refine answers with industry‑level precision.
+      </p>
+    </div>
+
+    <!-- MASTER STRATEGY -->
+    <div class="section">
+      <h2>Master Strategy Agent (CEO AI)</h2>
+      <p class="about-text">
+        <strong>Strengths:</strong> synthesis, decision‑making, direction<br>
+        <strong>Best for:</strong> final answers, strategic guidance<br><br>
+        This agent merges all insights from the other agents and produces a unified, executive‑level decision — like a CEO making the final call.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- Theme Toggle Script -->
+  <script src="theme.js"></script>
+
+</body>
+</html>
