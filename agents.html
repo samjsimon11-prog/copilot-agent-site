@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agents – Copilot Agents</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Global Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- NAVIGATION BAR -->
+  <nav>
+    <div class="nav-left">
+      <a href="index.html">Home</a>
+      <a href="agents.html">Agents</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="theme-preview.html">Themes</a>
+      <a href="art-gallery.html">Art Gallery</a>
+      <a href="profiles.html">Profiles</a>
+      <a href="about.html">About</a>
+    </div>
+    <div class="theme-toggle">Toggle Theme</div>
+  </nav>
+
+  <!-- ANIMATED SWIRL BACKGROUND -->
+  <div class="swirl-layer">
+    <svg viewBox="0 0 800 600">
+      <defs>
+        <!-- Light Mode Gradient -->
+        <linearGradient id="lightSwirl" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#C89B2B" />
+          <stop offset="50%" stop-color="#0B7C4A" />
+          <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+        </linearGradient>
+
+        <!-- Dark Mode Gradient -->
+        <linearGradient id="darkSwirl" x1="0" y1="1" x2="1" y2="0">
+          <stop offset="0%" stop-color="#5B2B9B" />
+          <stop offset="50%" stop-color="#B57CFF" />
+          <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+        </linearGradient>
+
+        <!-- Icon Gradient -->
+        <linearGradient id="iconGradientPurple" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#B57CFF" />
+          <stop offset="50%" stop-color="#D04BFF" />
+          <stop offset="100%" stop-color="#FF4DF0" />
+        </linearGradient>
+      </defs>
+
+      <!-- Swirl Shapes -->
+      <path class="swirl-glow"
+            d="M-40 120 C 160 -40 360 40 520 80"
+            stroke="url(#lightSwirl)"
+            stroke-width="80"
+            fill="none" />
+
+      <path class="swirl-glow"
+            d="M-60 420 C 120 520 320 520 480 460"
+            stroke="url(#darkSwirl)"
+            stroke-width="70"
+            fill="none" />
+
+      <circle class="swirl-glow"
+              cx="120" cy="480" r="80"
+              fill="url(#darkSwirl)" />
+
+      <circle class="swirl-glow"
+              cx="640" cy="140" r="70"
+              fill="url(#lightSwirl)" />
+    </svg>
+  </div>
+
+  <!-- PAGE CONTENT -->
+  <div class="page">
+    <h1>Agents & Roles</h1>
+    <p class="subtitle">Each agent has a clear tone and responsibility.</p>
+
+    <section class="ai-grid">
+
+      <!-- CUSTOMER SERVICE AGENT -->
+      <article class="ai-card">
+        <div class="ai-header">
+          <div class="ai-name-with-icon">
+            <svg class="ai-icon" viewBox="0 0 24 24">
+              <path d="M6 9a6 6 0 0112 0v3a2 2 0 01-2 2h-1.5"
+                    fill="none"
+                    stroke="url(#iconGradientPurple)"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+              <path d="M5 9v3a3 3 0 003 3h1"
+                    fill="none"
+                    stroke="url(#iconGradientPurple)"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+              <circle cx="18" cy="17" r="2"
+                      fill="url(#iconGradientPurple)" />
+            </svg>
+            <h3 class="ai-name">Customer Service Agent</h3>
+          </div>
+          <span class="ai-tag">Frontline Support</span>
+        </div>
+        <div class="ai-meta">
+          <span><strong>Tone:</strong> friendly, empathetic</span>
+          <span><strong>Job:</strong> clarify user needs, detect issues</span>
+        </div>
+        <p class="ai-description">
+          This agent listens carefully, asks clarifying questions, and spots problems early. It’s built to make users feel understood while surfacing what’s really going wrong.
+        </p>
+      </article>
+
+      <!-- RESEARCH & ANALYSIS AGENT -->
+      <article class="ai-card">
+        <div class="ai-header">
+          <div class="ai-name-with-icon">
+            <svg class="ai-icon" viewBox="0 0 24 24">
+              <circle cx="10" cy="10" r="4"
+                      fill="none"
+                      stroke="url(#iconGradientPurple)"
+                      stroke-width="2" />
+              <line x1="14" y1="14" x2="19" y2="19"
+                    stroke="url(#iconGradientPurple)"
+                    stroke-width="2"
+                    stroke-linecap="round" />
+            </svg>
+            <h3 class="ai-name">Research & Analysis Agent</h3>
+          </div>
+          <span class="ai-tag">Facts & Summaries</span>
+        </div>
+        <div class="ai-meta">
+          <span><strong>Tone:</strong> analytical, structured</span>
+          <span><strong>Job:</strong> extract facts, summarize, verify</span>
+        </div>
+        <p class="ai-description">
+          This agent digs through information, pulls out the key points, and checks for consistency. It’s your go‑to for clean summaries and grounded research.
+        </p>
+      </article>
+
+      <!-- BUSINESS STRATEGY AGENT -->
+      <article class="ai-card">
+        <div class="ai-header">
+          <div class="ai-name-with-icon">
+            <svg class="ai-icon" viewBox="0 0 24 24">
+              <path d="M8 20l3-9 5 5-3 4z"
+                    fill="none"
+                    stroke="url(#iconGradientPurple)"
+                    stroke-width="2"
+                    stroke-linejoin="round"
+                    stroke-linecap="round" />
+              <circle cx="9" cy="7" r="2"
+                      fill="url(#iconGradientPurple)" />
+            </svg>
+            <h3 class="ai-name">Business Strategy Agent</h3>
+          </div>
+          <span class="ai-tag">Operations & Feasibility</span>
+        </div>
+        <div class="ai-meta">
+          <span><strong>Tone:</strong> executive, decisive</span>
+          <span><strong>Job:</strong> evaluate feasibility, risk, operations</span>
+        </div>
+        <p class="ai-description">
+          This agent thinks like a strategist—balancing risk, resources, and execution. It helps turn ideas into realistic plans that could actually work.
+        </p>
+      </article>
+
+      <!-- FINANCIAL & MARKET ANALYSIS AGENT -->
+      <article class="ai-card">
+        <div class="ai-header">
+          <div class="ai-name-with-icon">
+            <svg class="ai-icon" viewBox="0 0 24 24">
+              <rect x="4" y="12" width="3" height="6"
+                    fill="url(#iconGradientPurple)" />
+              <rect x="10" y="9" width="3" height="9"
+                    fill="url(#iconGradientPurple)" />
+              <rect x="16" y="6" width="3" height="12"
+                    fill="url(#iconGradientPurple)" />
+            </svg>
+            <h3 class="ai-name">Financial & Market Analysis Agent</h3>
+          </div>
+          <span class="ai-tag">Numbers & ROI</span>
+        </div>
+        <div class="ai-meta">
+          <span><strong>Tone:</strong> quantitative, skeptical</span>
+          <span><strong>Job:</strong> evaluate numbers, markets, ROI</span>
+        </div>
+        <p class="ai-description">
+          This agent challenges assumptions with data. It looks at costs, returns, and market signals to keep decisions grounded in reality—not just vibes.
+        </p>
+      </article>
+
+      <!-- UNLIMITED INPUT AGENT -->
+      <article class="ai-card">
+        <div class="ai-header">
+          <div class="ai-name-with-icon">
+            <svg class="ai-icon" viewBox="0 0 24 24">
+              <rect x="5" y="5" width="10" height="6"
+                    fill="none"
+                    stroke="url(#iconGradientPurple)"
+                    stroke-width="2" />
+              <rect x="7" y="11" width="10" height="6"
+                    fill="none"
+                    stroke="url(#iconGradientPurple)"
+                    stroke-width="2" />
+            </svg>
+            <h3 class="ai-name">Unlimited‑Input Agent</h3>
+          </div>
+          <span class="ai-tag">Long Text Handling</span>
+        </div>
+        <div class="ai-meta">
+          <span><strong>Tone:</strong> neutral</span>
+          <span><strong>Job:</strong> handle long text, chunking, merging</span>
+        </div>
+        <p class="ai-description">
+          This agent is built for huge inputs—documents, transcripts, long chats. It breaks them into chunks, processes them, and stitches everything back together coherently.
+        </p>
+      </article>
+
+      <!-- SALES & PERSUASION AGENT -->
+      <article class="ai-card">
+        <div class="ai-header">
+          <div class="ai-name-with-icon">
+            <svg class="ai-icon" viewBox="0 0 24 24">
+              <path d="M5 10l8-4v8l-8-4z"
+                    fill="url(#iconGradientPurple)" />
+              <path d="M15 9v6"
+                    stroke="url(#iconGradientPurple)"
+                    stroke-width="2"
+                    stroke-linecap="round" />
+            </svg>
+            <h3 class="ai-name">Sales & Persuasion Agent</h3>
+          </div>
+          <span class="ai-tag">Messaging & Pitch</span>
+        </div>
+        <div class="ai-meta">
+          <span><strong>Tone:</strong> energetic, persuasive</span>
+          <span><strong>Job:</strong> evaluate messaging, market fit</span>
+        </div>
+        <p class="ai-description">
+          This agent focuses on how things sound—headlines, pitches, emails, landing pages. It tunes language for clarity, emotion, and conversion.
+        </p>
+      </article>
+
+      <!-- INDUSTRY-SPECIFIC AGENT -->
+      <article class="ai-card">
+        <div class="ai-header">
+          <div class="ai-name-with-icon">
+            <svg class="ai-icon" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="3"
+                      fill="url(#iconGradientPurple)" />
+              <path d="M12 5v2M12 17v2M5 12h2M17 12h2M7 7l1.5 1.5M15.5 15.5L17 17M17 7l-1.5 1.5M7 17l1.5-1.5"
+                    stroke="url(#iconGradientPurple)"
+                    stroke-width="1.5"
+                    stroke-linecap="round" />
+            </svg>
+            <h3 class="ai-name">Industry‑Specific Agent</h3>
+          </div>
+          <span class="ai-tag">Domain Expertise</span>
+        </div>
+        <div class="ai-meta">
+          <span><strong>Tone:</strong> expert</span>
+          <span><strong>Job:</strong> apply domain knowledge</span>
+        </div>
+        <p class="ai-description">
+          This agent brings specialized knowledge to the table. It understands the jargon, constraints, and patterns of a specific industry and uses that to refine answers.
+        </p>
+      </article>
+
+      <!-- MASTER STRATEGY AGENT -->
+      <article class="ai-card">
+        <div class="ai-header">
+          <div class="ai-name-with-icon">
+            <svg class="ai-icon" viewBox="0 0 24 24">
+              <path d="M5 18h14l-1-7-3 3-3-5-3 5-3-3z"
+                    fill="none"
+                    stroke="url(#iconGradientPurple)"
+                    stroke-width="2"
+                    stroke-linejoin="round"
+                    stroke-linecap="round" />
+              <circle cx="12" cy="7" r="2"
+                      fill="url(#iconGradientPurple)" />
+            </svg>
+            <h3 class="ai-name">Master Strategy Agent (CEO AI)</h3>
+          </div>
+          <span class="ai-tag">Synthesis & Direction</span>
+        </div>
+        <div class="ai-meta">
+          <span><strong>Tone:</strong> authoritative, synthesizing</span>
+          <span><strong>Job:</strong> combine all insights into a unified strategy</span>
+        </div>
+        <p class="ai-description">
+          This agent sits at the top. It listens to all the other agents, merges their insights, and proposes a clear direction—like a CEO making the final call.
+        </p>
+      </article>
+
+    </section>
+  </div>
+
+  <!-- Theme Toggle Script -->
+  <script src="theme.js"></script>
+
+</body>
+</html>
