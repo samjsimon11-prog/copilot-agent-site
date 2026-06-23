@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Agents – Copilot Agents</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Global Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- UPDATED NAVIGATION BAR -->
+  <nav>
+    <div class="nav-left">
+      <a href="index.html">Home</a>
+      <a href="agents.html">Agents</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="profiles.html">Profiles</a>
+      <a href="about.html">About</a>
+      <a href="terms.html">Terms & Policies</a>
+    </div>
+    <div class="theme-toggle">Toggle Theme</div>
+  </nav>
+
+  <!-- ANIMATED SWIRL BACKGROUND -->
+  <div class="swirl-layer">
+    <svg viewBox="0 0 800 600">
+      <defs>
+        <linearGradient id="lightSwirl" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#C89B2B" />
+          <stop offset="50%" stop-color="#0B7C4A" />
+          <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+        </linearGradient>
+
+        <linearGradient id="darkSwirl" x1="0" y1="1" x2="1" y2="0">
+          <stop offset="0%" stop-color="#5B2B9B" />
+          <stop offset="50%" stop-color="#B57CFF" />
+          <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+        </linearGradient>
+      </defs>
+
+      <path class="swirl-glow"
+            d="M-40 120 C 160 -40 360 40 520 80"
+            stroke="url(#lightSwirl)"
+            stroke-width="80"
+            fill="none" />
+
+      <path class="swirl-glow"
+            d="M-60 420 C 120 520 320 520 480 460"
+            stroke="url(#darkSwirl)"
+            stroke-width="70"
+            fill="none" />
+
+      <circle class="swirl-glow"
+              cx="120" cy="480" r="80"
+              fill="url(#darkSwirl)" />
+
+      <circle class="swirl-glow"
+              cx="640" cy="140" r="70"
+              fill="url(#lightSwirl)" />
+    </svg>
+  </div>
+
+  <!-- PAGE CONTENT -->
+  <div class="page">
+    <h1>Meet the AI Agents</h1>
+    <p class="subtitle">
+      Each agent has a unique role, tone, and specialization.
+    </p>
+
+    <div class="ai-grid">
+
+      <!-- CUSTOMER SERVICE AGENT -->
+      <div class="ai-card">
+        <div class="ai-header">
+          <div class="ai-name-with-icon">
+            <img src="https://img.icons8.com/ios-filled/50/000000/customer-support.png" class="ai-icon">
+            <div class="ai-name">Customer Service Agent</div>
+          </div>
+          <div class="ai-tag">Support</div>
+        </div>
+        <div class="ai-meta">Tone: Friendly, Clarifying</div>
+        <div class="ai-description">
+          Helps identify user needs, asks clarifying questions, and ensures requests are understood.
+        </div>
+      </div>
+
+      <!-- RESEARCH AGENT -->
+      <div class="ai-card">
+        <div class="ai-header">
+          <div class="ai-name-with-icon">
+            <img src="https://img.icons8.com/ios-filled/50/000000/search--v1.png" class="ai-icon">
+            <div class="ai-name">Research & Analysis Agent</div>
+          </div>
+          <div class="ai-tag">Research</div>
+        </div>
+        <div class="ai-meta">Tone: Neutral, Factual</div>
+        <div class="ai-description">
+          Gathers information, summarizes data, and provides evidence‑based insights.
+        </div>
+      </div>
+
+      <!-- BUSINESS STRATEGY AGENT -->
+      <div class="ai-card">
+        <div class="ai-header">
+          <div class="ai-name-with-icon">
+            <img src="https://img.icons8.com/ios-filled/50/000000/briefcase.png" class="ai-icon">
+            <div class="ai-name">Business Strategy Agent</div>
+          </div>
+          <div class="ai-tag">Strategy</div>
+        </div>
+        <div class="ai-meta">Tone: Analytical, Structured</div>
+        <div class="ai-description">
+          Evaluates feasibility, operations, and long‑term planning.
+        </div>
+      </div>
+
+      <!-- FINANCIAL AGENT -->
+      <div class="ai-card">
+        <div class="ai-header">
+          <div class="ai-name-with-icon">
+            <img src="https://img.icons8.com/ios-filled/50/000000/money.png" class="ai-icon">
+            <div class="ai-name">Financial Agent</div>
+          </div>
+          <div class="ai-tag">Finance</div>
+        </div>
+        <div class="ai-meta">Tone: Precise, Cautious</div>
+        <div class="ai-description">
+          Reviews ROI, cost structures, and market signals.
+        </div>
+      </div>
+
+      <!-- UNLIMITED INPUT AGENT -->
+      <div class="ai-card">
+        <div class="ai-header">
+          <div class="ai-name-with-icon">
+            <img src="https://img.icons8.com/ios-filled/50/000000/document.png" class="ai-icon">
+            <div class="ai-name">Unlimited‑Input Agent</div>
+          </div>
+          <div class="ai-tag">Documents</div>
+        </div>
+        <div class="ai-meta">Tone: Efficient, Technical</div>
+        <div class="ai-description">
+          Handles long text, large documents, and extended inputs.
+        </div>
+      </div>
+
+      <!-- SALES AGENT -->
+      <div class="ai-card">
+        <div class="ai-header">
+          <div class="ai-name-with-icon">
+            <img src="https://img.icons8.com/ios-filled/50/000000/sales-performance.png" class="ai-icon">
+            <div class="ai-name">Sales & Persuasion Agent</div>
+          </div>
+          <div class="ai-tag">Sales</div>
+        </div>
+        <div class="ai-meta">Tone: Energetic, Clear</div>
+        <div class="ai-description">
+          Refines messaging, improves clarity, and enhances persuasive communication.
+        </div>
+      </div>
+
+      <!-- INDUSTRY AGENT -->
+      <div class="ai-card">
+        <div class="ai-header">
+          <div class="ai-name-with-icon">
+            <img src="https://img.icons8.com/ios-filled/50/000000/industry.png" class="ai-icon">
+            <div class="ai-name">Industry‑Specific Agent</div>
+          </div>
+          <div class="ai-tag">Expertise</div>
+        </div>
+        <div class="ai-meta">Tone: Specialized, Knowledgeable</div>
+        <div class="ai-description">
+          Applies domain‑specific expertise to user requests.
+        </div>
+      </div>
+
+      <!-- MASTER STRATEGY AGENT -->
+      <div class="ai-card">
+        <div class="ai-header">
+          <div class="ai-name-with-icon">
+            <img src="https://img.icons8.com/ios-filled/50/000000/crown.png" class="ai-icon">
+            <div class="ai-name">Master Strategy Agent (CEO AI)</div>
+          </div>
+          <div class="ai-tag">Leadership</div>
+        </div>
+        <div class="ai-meta">Tone: Decisive, Synthesizing</div>
+        <div class="ai-description">
+          Combines insights from all agents to produce a final direction.
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Theme Toggle Script -->
+  <script src="theme.js"></script>
+
+</body>
+</html>
