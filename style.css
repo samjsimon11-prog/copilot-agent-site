@@ -28,7 +28,7 @@ html, body {
   --nav-bg: rgba(0, 0, 0, 0.6);
 }
 
-/* FIXED FULL‑SCREEN SWIRL BACKGROUND — OPTION A (SOFTER) */
+/* FIXED FULL‑SCREEN SWIRL BACKGROUND — BALANCED VERSION */
 .swirl-layer {
   position: fixed;
   top: 0;
@@ -40,13 +40,13 @@ html, body {
   overflow: hidden;
 }
 
-/* Softer, dimmer, easier to read over */
+/* Visible but not overpowering */
 .swirl-layer svg {
-  width: 140%;
-  height: 140%;
-  transform: translate(-10%, -10%);
-  opacity: 0.22;        /* softer swirls */
-  filter: blur(4px);    /* gentle glow */
+  width: 150%;
+  height: 150%;
+  transform: translate(-15%, -15%);
+  opacity: 0.32;        /* stronger than 0.22, still soft */
+  filter: blur(3px);    /* slightly less blur for visibility */
 }
 
 /* NAVIGATION BAR */
