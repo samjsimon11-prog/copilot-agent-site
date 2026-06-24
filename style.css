@@ -1,0 +1,155 @@
+/* GLOBAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+/* THEME VARIABLES */
+:root[data-theme="light"] {
+  --bg: #ffffff;
+  --text: #111111;
+  --card-bg: rgba(255, 255, 255, 0.6);
+  --nav-bg: rgba(255, 255, 255, 0.7);
+}
+
+:root[data-theme="dark"] {
+  --bg: #0d0d0d;
+  --text: #f5f5f5;
+  --card-bg: rgba(0, 0, 0, 0.4);
+  --nav-bg: rgba(0, 0, 0, 0.6);
+}
+
+/* FIXED FULL‑SCREEN SWIRL BACKGROUND — BALANCED VERSION */
+.swirl-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* Visible but not overpowering */
+.swirl-layer svg {
+  width: 150%;
+  height: 150%;
+  transform: translate(-15%, -15%);
+  opacity: 0.32;        /* stronger than 0.22, still soft */
+  filter: blur(3px);    /* slightly less blur for visibility */
+}
+
+/* NAVIGATION BAR */
+nav {
+  width: 100%;
+  padding: 18px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--nav-bg);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-left a {
+  margin-right: 22px;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.nav-left a:hover {
+  opacity: 0.6;
+}
+
+.theme-toggle {
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: var(--card-bg);
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* PAGE CONTENT */
+.page {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 18px;
+  opacity: 0.8;
+  margin-bottom: 40px;
+}
+
+/* CARDS + GRIDS */
+.preview-grid,
+.ai-grid,
+.profile-grid {
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.preview-card,
+.ai-card,
+.profile-card {
+  background: var(--card-bg);
+  padding: 22px;
+  border-radius: 14px;
+  backdrop-filter: blur(10px);
+}
+
+.ai-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ai-name-with-icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ai-icon {
+  width: 28px;
+  height: 28px;
+}
+
+.ai-tag {
+  background: var(--text);
+  color: var(--bg);
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.section {
+  margin-bottom: 50px;
+}
+
+.about-text {
+  opacity: 0.85;
+  line-height: 1.6;
+  margin-top: 10px;
+}
