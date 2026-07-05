@@ -1,22 +1,44 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Copilot Agents – Home</title>
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>Copilot Agent System</title>
 
   <!-- Global Styles -->
   <link rel="stylesheet" href="style.css" />
+  <script src="theme.js" defer></script>
 </head>
 
 <body>
 
-  <!-- UPDATED NAVIGATION BAR -->
+  <!-- SWIRL BACKGROUND (placed at top of body, correct position) -->
+  <div class="swirl-layer">
+    <svg viewBox="0 0 800 600">
+      <defs>
+        <linearGradient id="lightSwirl" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#6D89B2" />
+          <stop offset="50%" stop-color="#0B7C4A" />
+          <stop offset="100%" stop-color="#0D3B66" />
+        </linearGradient>
+
+        <linearGradient id="darkSwirl" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#1A1A1A" />
+          <stop offset="50%" stop-color="#0B4C3A" />
+          <stop offset="100%" stop-color="#0D0D0D" />
+        </linearGradient>
+      </defs>
+
+      <!-- Swirl Path -->
+      <path d="M0 300 Q200 250 400 300 T800 300"
+            stroke="url(#lightSwirl)"
+            stroke-width="140"
+            fill="none"
+            opacity="0.35" />
+    </svg>
+  </div>
+
+  <!-- NAVIGATION BAR -->
   <nav>
     <div class="nav-left">
       <a href="index.html">Home</a>
@@ -29,71 +51,19 @@
     <div class="theme-toggle">Toggle Theme</div>
   </nav>
 
-  <!-- ANIMATED SWIRL BACKGROUND -->
-  <div class="swirl-layer">
-    <svg viewBox="0 0 800 600">
-      <defs>
-        <linearGradient id="lightSwirl" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stop-color="#C89B2B" />
-          <stop offset="50%" stop-color="#0B7C4A" />
-          <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
-        </linearGradient>
-
-        <linearGradient id="darkSwirl" x1="0" y1="1" x2="1" y2="0">
-          <stop offset="0%" stop-color="#5B2B9B" />
-          <stop offset="50%" stop-color="#B57CFF" />
-          <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
-        </linearGradient>
-      </defs>
-
-      <path class="swirl-glow"
-            d="M-40 120 C 160 -40 360 40 520 80"
-            stroke="url(#lightSwirl)"
-            stroke-width="80"
-            fill="none" />
-
-      <path class="swirl-glow"
-            d="M-60 420 C 120 520 320 520 480 460"
-            stroke="url(#darkSwirl)"
-            stroke-width="70"
-            fill="none" />
-
-      <circle class="swirl-glow"
-              cx="120" cy="480" r="80"
-              fill="url(#darkSwirl)" />
-
-      <circle class="swirl-glow"
-              cx="640" cy="140" r="70"
-              fill="url(#lightSwirl)" />
-    </svg>
-  </div>
-
   <!-- PAGE CONTENT -->
   <div class="page">
-    <h1>Welcome to the Copilot Multi‑Agent System</h1>
-    <p class="subtitle">
-      A coordinated lineup of specialized AI agents designed to work together.
-    </p>
+    <h1>Welcome to the Copilot Agent System</h1>
+    <p class="subtitle">A coordinated multi-agent workflow designed to help you get things done.</p>
 
-    <div class="preview-grid">
-      <div class="preview-card">
-        <div class="preview-title">Meet the Agents</div>
-        <div class="preview-desc">
-          Explore the personalities, roles, and strengths of each AI agent.
-        </div>
-      </div>
-
-      <div class="preview-card">
-        <div class="preview-title">How It Works</div>
-        <div class="preview-desc">
-          Learn how the agents collaborate to produce high‑quality results.
-        </div>
-      </div>
+    <div class="section">
+      <h2>Overview</h2>
+      <p class="about-text">
+        This system uses multiple specialized agents working together to understand your request,
+        research information, evaluate strategy, and provide financial insights.
+      </p>
     </div>
   </div>
-
-  <!-- Theme Toggle Script -->
-  <script src="theme.js"></script>
 
 </body>
 </html>
