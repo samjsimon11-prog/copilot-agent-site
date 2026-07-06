@@ -1,22 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Agent Profiles – Copilot Agents</title>
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Global Styles -->
+  <title>Profiles</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="theme.js" defer></script>
 </head>
 
 <body>
 
-  <!-- UPDATED NAVIGATION BAR -->
   <nav>
     <div class="nav-left">
       <a href="index.html">Home</a>
@@ -29,123 +22,21 @@
     <div class="theme-toggle">Toggle Theme</div>
   </nav>
 
-  <!-- ANIMATED SWIRL BACKGROUND -->
-  <div class="swirl-layer">
-    <svg viewBox="0 0 800 600">
-      <defs>
-        <linearGradient id="lightSwirl" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stop-color="#C89B2B" />
-          <stop offset="50%" stop-color="#0B7C4A" />
-          <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
-        </linearGradient>
-
-        <linearGradient id="darkSwirl" x1="0" y1="1" x2="1" y2="0">
-          <stop offset="0%" stop-color="#5B2B9B" />
-          <stop offset="50%" stop-color="#B57CFF" />
-          <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
-        </linearGradient>
-      </defs>
-
-      <path class="swirl-glow"
-            d="M-40 120 C 160 -40 360 40 520 80"
-            stroke="url(#lightSwirl)"
-            stroke-width="80"
-            fill="none" />
-
-      <path class="swirl-glow"
-            d="M-60 420 C 120 520 320 520 480 460"
-            stroke="url(#darkSwirl)"
-            stroke-width="70"
-            fill="none" />
-
-      <circle class="swirl-glow"
-              cx="120" cy="480" r="80"
-              fill="url(#darkSwirl)" />
-
-      <circle class="swirl-glow"
-              cx="640" cy="140" r="70"
-              fill="url(#lightSwirl)" />
-    </svg>
-  </div>
-
-  <!-- PAGE CONTENT -->
-  <div class="page">
-    <h1>Agent Profiles</h1>
-    <p class="subtitle">
-      A deeper look into each agent’s personality, strengths, and role.
+  <header class="hero">
+    <h1 class="hero-title">Explore AI Personalities and Roles</h1>
+    <p class="hero-subtitle">
+      Learn how each agent thinks, communicates, and contributes to the system.
     </p>
+  </header>
 
-    <div class="profile-grid">
-
-      <div class="profile-card">
-        <h2>Customer Service Agent</h2>
-        <p class="about-text">
-          Friendly, clarifying, and focused on understanding user needs.  
-          This agent ensures every request is interpreted correctly before work begins.
-        </p>
-      </div>
-
-      <div class="profile-card">
-        <h2>Research & Analysis Agent</h2>
-        <p class="about-text">
-          Neutral and factual.  
-          Gathers information, summarizes data, and provides evidence‑based insights.
-        </p>
-      </div>
-
-      <div class="profile-card">
-        <h2>Business Strategy Agent</h2>
-        <p class="about-text">
-          Analytical and structured.  
-          Evaluates feasibility, operations, and long‑term planning.
-        </p>
-      </div>
-
-      <div class="profile-card">
-        <h2>Financial Agent</h2>
-        <p class="about-text">
-          Precise and cautious.  
-          Reviews ROI, cost structures, and market signals.
-        </p>
-      </div>
-
-      <div class="profile-card">
-        <h2>Unlimited‑Input Agent</h2>
-        <p class="about-text">
-          Efficient and technical.  
-          Handles long text, large documents, and extended inputs.
-        </p>
-      </div>
-
-      <div class="profile-card">
-        <h2>Sales & Persuasion Agent</h2>
-        <p class="about-text">
-          Energetic and clear.  
-          Enhances messaging, clarity, and persuasive communication.
-        </p>
-      </div>
-
-      <div class="profile-card">
-        <h2>Industry‑Specific Agent</h2>
-        <p class="about-text">
-          Specialized and knowledgeable.  
-          Applies domain‑specific expertise to refine solutions.
-        </p>
-      </div>
-
-      <div class="profile-card">
-        <h2>Master Strategy Agent (CEO AI)</h2>
-        <p class="about-text">
-          Decisive and synthesizing.  
-          Combines insights from all agents to produce a unified final answer.
-        </p>
-      </div>
-
+  <div class="page">
+    <div class="section">
+      <h2>Agent Profiles</h2>
+      <p class="about-text">
+        Each profile highlights the agent’s tone, strengths, and decision‑making style.
+      </p>
     </div>
   </div>
-
-  <!-- Theme Toggle Script -->
-  <script src="theme.js"></script>
 
 </body>
 </html>
