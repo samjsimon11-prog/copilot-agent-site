@@ -1,22 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>How It Works – Copilot Agents</title>
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Global Styles -->
+  <title>How It Works</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="theme.js" defer></script>
 </head>
 
 <body>
 
-  <!-- UPDATED NAVIGATION BAR -->
   <nav>
     <div class="nav-left">
       <a href="index.html">Home</a>
@@ -29,105 +22,22 @@
     <div class="theme-toggle">Toggle Theme</div>
   </nav>
 
-  <!-- ANIMATED SWIRL BACKGROUND -->
-  <div class="swirl-layer">
-    <svg viewBox="0 0 800 600">
-      <defs>
-        <linearGradient id="lightSwirl" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stop-color="#C89B2B" />
-          <stop offset="50%" stop-color="#0B7C4A" />
-          <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
-        </linearGradient>
-
-        <linearGradient id="darkSwirl" x1="0" y1="1" x2="1" y2="0">
-          <stop offset="0%" stop-color="#5B2B9B" />
-          <stop offset="50%" stop-color="#B57CFF" />
-          <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
-        </linearGradient>
-      </defs>
-
-      <path class="swirl-glow"
-            d="M-40 120 C 160 -40 360 40 520 80"
-            stroke="url(#lightSwirl)"
-            stroke-width="80"
-            fill="none" />
-
-      <path class="swirl-glow"
-            d="M-60 420 C 120 520 320 520 480 460"
-            stroke="url(#darkSwirl)"
-            stroke-width="70"
-            fill="none" />
-
-      <circle class="swirl-glow"
-              cx="120" cy="480" r="80"
-              fill="url(#darkSwirl)" />
-
-      <circle class="swirl-glow"
-              cx="640" cy="140" r="70"
-              fill="url(#lightSwirl)" />
-    </svg>
-  </div>
-
-  <!-- PAGE CONTENT -->
-  <div class="page">
-    <h1>How the Multi‑Agent System Works</h1>
-    <p class="subtitle">
-      A coordinated workflow where each agent contributes its strengths.
+  <header class="hero">
+    <h1 class="hero-title">How Your Multi‑Agent System Thinks</h1>
+    <p class="hero-subtitle">
+      A step‑by‑step breakdown of how agents collaborate to solve complex tasks.
     </p>
+  </header>
 
+  <div class="page">
     <div class="section">
-      <h2>1. Understanding the User’s Request</h2>
+      <h2>Process Overview</h2>
       <p class="about-text">
-        The Customer Service Agent begins by clarifying the user’s needs, asking questions, and ensuring the system fully understands the goal.
+        The system analyzes your request, distributes tasks across agents, and merges their
+        insights into a unified final answer.
       </p>
     </div>
-
-    <div class="section">
-      <h2>2. Research & Information Gathering</h2>
-      <p class="about-text">
-        The Research & Analysis Agent collects relevant information, summarizes data, and provides factual context for the task.
-      </p>
-    </div>
-
-    <div class="section">
-      <h2>3. Strategic Evaluation</h2>
-      <p class="about-text">
-        The Business Strategy Agent evaluates feasibility, planning, and long‑term considerations to guide the direction of the solution.
-      </p>
-    </div>
-
-    <div class="section">
-      <h2>4. Financial & Market Review</h2>
-      <p class="about-text">
-        The Financial Agent analyzes cost, ROI, and market conditions to ensure the solution is grounded in realistic expectations.
-      </p>
-    </div>
-
-    <div class="section">
-      <h2>5. Specialized Expertise</h2>
-      <p class="about-text">
-        The Industry‑Specific Agent applies domain knowledge to refine the solution with expert‑level insight.
-      </p>
-    </div>
-
-    <div class="section">
-      <h2>6. Communication & Presentation</h2>
-      <p class="about-text">
-        The Sales & Persuasion Agent improves clarity, tone, and messaging to ensure the final output is polished and compelling.
-      </p>
-    </div>
-
-    <div class="section">
-      <h2>7. Final Synthesis</h2>
-      <p class="about-text">
-        The Master Strategy Agent (CEO AI) combines all insights into a unified, high‑quality final answer.
-      </p>
-    </div>
-
   </div>
-
-  <!-- Theme Toggle Script -->
-  <script src="theme.js"></script>
 
 </body>
 </html>
