@@ -28,11 +28,11 @@ html, body {
   --nav-bg: rgba(0, 0, 0, 0.6);
 }
 
-/* FULL-PAGE SWIRL-LIKE GRADIENT */
+/* SWIRL-LIKE GRADIENT BACKGROUND */
 body {
   background:
-    radial-gradient(circle at top left, rgba(109,137,178,0.35), transparent 60%),
-    radial-gradient(circle at bottom right, rgba(11,124,74,0.35), transparent 60%),
+    radial-gradient(circle at top right, rgba(11,124,74,0.35), transparent 60%),
+    radial-gradient(circle at bottom left, rgba(109,137,178,0.35), transparent 60%),
     radial-gradient(circle at center, rgba(13,59,102,0.35), transparent 70%);
 }
 
