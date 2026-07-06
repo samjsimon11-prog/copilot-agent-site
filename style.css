@@ -46,7 +46,7 @@ body {
   --nav-bg: rgba(0, 0, 0, 0.6);
 }
 
-/* FULL-PAGE NEON SWIRL BACKGROUND (Prodigy Style) */
+/* FULL-PAGE NEON SWIRL BACKGROUND */
 body {
   background:
     radial-gradient(circle at 20% 20%, rgba(255,0,200,0.35), transparent 60%),
@@ -90,7 +90,7 @@ nav {
   transition: all 0.25s ease;
 }
 
-/* Soft neon hover glow (Prodigy style) */
+/* Soft neon hover glow */
 .nav-left a:hover {
   text-shadow: 0 0 4px rgba(255,0,200,0.35),
                0 0 6px rgba(0,120,255,0.35),
@@ -105,6 +105,7 @@ nav {
   cursor: pointer;
   font-size: 14px;
   transition: all 0.25s ease;
+  position: relative;
 }
 
 .theme-toggle:hover {
@@ -243,10 +244,7 @@ nav {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ============================
-   MOBILE OPTIMIZATION
-   ============================ */
-
+/* MOBILE OPTIMIZATION */
 @media (max-width: 900px) {
 
   .hero {
@@ -350,10 +348,7 @@ nav {
   }
 }
 
-/* ============================
-   HAMBURGER NAVIGATION
-   ============================ */
-
+/* HAMBURGER NAVIGATION */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -414,4 +409,192 @@ nav {
   .hamburger {
     display: flex;
   }
+}
+
+/* PRICING PAGE */
+.pricing-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.pricing-card {
+  background: var(--card-bg);
+  padding: 30px;
+  border-radius: 20px;
+  width: 300px;
+  text-align: center;
+  backdrop-filter: blur(12px);
+  animation: fadeInUp 1.4s ease forwards;
+  border: 1px solid rgba(255,255,255,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+.pricing-featured {
+  border: 2px solid rgba(0,120,255,0.45);
+  box-shadow: 0 0 20px rgba(0,120,255,0.35);
+}
+
+.pricing-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+  animation: pulseGlow 3s ease-in-out infinite alternate;
+}
+
+.pricing-title {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.pricing-price {
+  font-size: 22px;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.pricing-list {
+  list-style: none;
+  text-align: left;
+  margin: 20px 0;
+  padding: 0;
+}
+
+.pricing-list li {
+  margin: 10px 0;
+  opacity: 0.85;
+}
+
+.pricing-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 20px;
+  border-radius: 10px;
+  background: var(--nav-bg);
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.pricing-button:hover {
+  text-shadow: 0 0 4px rgba(255,0,200,0.35),
+               0 0 6px rgba(0,120,255,0.35),
+               0 0 8px rgba(120,0,255,0.35);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+  .pricing-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* PLAN COMPARISON TABLE */
+.comparison-section {
+  margin-top: 60px;
+  text-align: center;
+  animation: fadeInUp 1.6s ease forwards;
+}
+
+.comparison-title {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.comparison-table {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  overflow: hidden;
+  animation: fadeInUp 1.8s ease forwards;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  color: var(--text);
+}
+
+.comparison-table th {
+  background: rgba(0,0,0,0.25);
+  font-size: 20px;
+}
+
+.comparison-table tr:last-child td {
+  border-bottom: none;
+}
+
+.comparison-table tr:hover {
+  background: rgba(255,255,255,0.08);
+  transition: background 0.25s ease;
+}
+
+@media (max-width: 900px) {
+  .comparison-table th,
+  .comparison-table td {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .comparison-title {
+    font-size: 26px;
+  }
+}
+
+/* BOT DESCRIPTIONS */
+.bot-section {
+  margin-top: 70px;
+  text-align: center;
+  animation: fadeInUp 1.6s ease forwards;
+}
+
+.bot-title {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.bot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.bot-card {
+  background: var(--card-bg);
+  padding: 24px;
+  border-radius: 18px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.15);
+  animation: fadeInUp 1.8s ease forwards;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bot-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+.bot-name {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.bot-desc {
+  opacity: 0.85;
+  line-height: 1.5;
 }
