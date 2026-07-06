@@ -28,14 +28,12 @@ html, body {
   --nav-bg: rgba(0, 0, 0, 0.6);
 }
 
-/* SIMPLE GRADIENT BACKGROUND (REPLACES SWIRL FOR NOW) */
+/* FULL-PAGE SWIRL-LIKE GRADIENT */
 body {
-  background: linear-gradient(
-    180deg,
-    rgba(109, 137, 178, 0.25),
-    rgba(11, 124, 74, 0.25),
-    rgba(13, 59, 102, 0.25)
-  );
+  background:
+    radial-gradient(circle at top left, rgba(109,137,178,0.35), transparent 60%),
+    radial-gradient(circle at bottom right, rgba(11,124,74,0.35), transparent 60%),
+    radial-gradient(circle at center, rgba(13,59,102,0.35), transparent 70%);
 }
 
 /* NAVIGATION */
@@ -90,49 +88,7 @@ h1 {
   margin-bottom: 40px;
 }
 
-/* CARDS + GRIDS */
-.preview-grid,
-.ai-grid,
-.profile-grid {
-  display: grid;
-  gap: 25px;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-}
-
-.preview-card,
-.ai-card,
-.profile-card {
-  background: var(--card-bg);
-  padding: 22px;
-  border-radius: 14px;
-  backdrop-filter: blur(10px);
-}
-
-.ai-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.ai-name-with-icon {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.ai-icon {
-  width: 28px;
-  height: 28px;
-}
-
-.ai-tag {
-  background: var(--text);
-  color: var(--bg);
-  padding: 4px 10px;
-  border-radius: 6px;
-  font-size: 12px;
-}
-
+/* SECTIONS */
 .section {
   margin-bottom: 50px;
 }
