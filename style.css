@@ -28,12 +28,19 @@ html, body {
   --nav-bg: rgba(0, 0, 0, 0.6);
 }
 
-/* SWIRL-LIKE GRADIENT BACKGROUND */
+/* BACKGROUND + PARALLAX */
 body {
   background:
     radial-gradient(circle at top right, rgba(11,124,74,0.35), transparent 60%),
     radial-gradient(circle at bottom left, rgba(109,137,178,0.35), transparent 60%),
     radial-gradient(circle at center, rgba(13,59,102,0.35), transparent 70%);
+  background-attachment: fixed;
+  animation: bgFloat 18s ease-in-out infinite alternate;
+}
+
+@keyframes bgFloat {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 100% 100%; }
 }
 
 /* NAVIGATION */
@@ -48,6 +55,7 @@ nav {
   position: sticky;
   top: 0;
   z-index: 10;
+  animation: fadeIn 1.2s ease forwards;
 }
 
 .nav-left a {
@@ -55,11 +63,12 @@ nav {
   text-decoration: none;
   color: var(--text);
   font-weight: 500;
-  transition: opacity 0.2s;
+  transition: transform 0.25s, opacity 0.25s;
 }
 
 .nav-left a:hover {
   opacity: 0.6;
+  transform: translateY(-2px);
 }
 
 .theme-toggle {
@@ -68,27 +77,87 @@ nav {
   background: var(--card-bg);
   cursor: pointer;
   font-size: 14px;
+  transition: transform 0.25s;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.05);
+}
+
+/* HERO SECTION */
+.hero {
+  text-align: center;
+  padding: 120px 20px 80px;
+  position: relative;
+  overflow: hidden;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+/* Floating gradient orbs with parallax */
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(40px);
+  opacity: 0.45;
+  animation: floatOrb 12s ease-in-out infinite alternate,
+             parallaxOrb 20s linear infinite alternate;
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.hero::before {
+  width: 280px;
+  height: 280px;
+  background: rgba(109,137,178,0.45);
+  top: -40px;
+  left: -60px;
+}
+
+.hero::after {
+  width: 320px;
+  height: 320px;
+  background: rgba(11,124,74,0.45);
+  bottom: -60px;
+  right: -40px;
+}
+
+@keyframes floatOrb {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(40px, -40px); }
+}
+
+@keyframes parallaxOrb {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(40px); }
+}
+
+.hero-title {
+  font-size: 64px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeInUp 1.4s ease forwards;
+}
+
+.hero-subtitle {
+  font-size: 22px;
+  opacity: 0;
+  max-width: 700px;
+  margin: 0 auto;
+  animation: fadeInUp 1.8s ease forwards;
 }
 
 /* PAGE CONTENT */
 .page {
   max-width: 900px;
-  margin: 80px auto;
+  margin: 40px auto;
   padding: 0 20px;
+  animation: fadeInUp 2s ease forwards;
 }
 
-h1 {
-  font-size: 42px;
-  margin-bottom: 10px;
-}
-
-.subtitle {
-  font-size: 18px;
-  opacity: 0.8;
-  margin-bottom: 40px;
-}
-
-/* SECTIONS */
 .section {
   margin-bottom: 50px;
 }
@@ -97,4 +166,61 @@ h1 {
   opacity: 0.85;
   line-height: 1.6;
   margin-top: 10px;
+}
+
+/* AGENT CARD */
+.agent-card {
+  background: var(--card-bg);
+  padding: 28px;
+  border-radius: 18px;
+  backdrop-filter: blur(12px);
+  text-align: center;
+  max-width: 320px;
+  margin: 40px auto;
+  animation: fadeInUp 2.2s ease forwards, floatCard 6s ease-in-out infinite alternate;
+  border: 1px solid rgba(255,255,255,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.agent-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+.agent-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+  animation: pulseGlow 3s ease-in-out infinite alternate;
+}
+
+.agent-name {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.agent-desc {
+  opacity: 0.85;
+  line-height: 1.5;
+}
+
+@keyframes floatCard {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-12px); }
+}
+
+@keyframes pulseGlow {
+  0% { opacity: 0.7; transform: scale(1); }
+  100% { opacity: 1; transform: scale(1.15); }
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
 }
