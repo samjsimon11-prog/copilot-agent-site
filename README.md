@@ -1,4 +1,4 @@
-# Copilot Multi‑Agent Website
+ # Copilot Multi‑Agent Website
 
 A fully custom, multi‑page website showcasing a coordinated lineup of AI agents — each with a distinct role, tone, and responsibility.  
 The site features animated glowing swirl backgrounds, a light/dark theme system, and a clean, modern UI inspired by Canva‑style elegance and Prodigy‑style magical energy.
