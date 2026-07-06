@@ -1,9 +1,13 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const toggle = document.querySelector(".theme-toggle");
-  const root = document.documentElement;
+// Hamburger menu toggle
+const hamburger = document.querySelector(".hamburger");
+const mobileMenu = document.querySelector(".mobile-menu");
 
-  toggle.addEventListener("click", () => {
-    const current = root.getAttribute("data-theme");
-    root.setAttribute("data-theme", current === "dark" ? "light" : "dark");
-  });
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+
+  if (mobileMenu.style.display === "flex") {
+    mobileMenu.style.display = "none";
+  } else {
+    mobileMenu.style.display = "flex";
+  }
 });
